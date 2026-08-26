@@ -34,6 +34,7 @@ Firmware files are loaded directly from tagged upstream release folders. The ver
 - Ikoka Stick
 - LilyGo T3S3
 - LilyGo T-Beam-S3 Supreme
+- RAK3401 + RAK13302
 - RAK4631 USB
 - RAK4631 WisMesh Ethernet
 - RAK WisMesh Base/Rak3112

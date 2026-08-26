@@ -668,6 +668,32 @@
 		{
 			"maker": "rak",
 			"class": "openhop",
+			"name": "RAK3401 + RAK13302",
+			"icon": "/img/rak_13302.svg",
+			"type": "nrf52",
+			"firmware": [
+				{
+					"role": "openHopModem",
+					"minimumRelease": "v1.2.0",
+					"version": {
+						"main": {
+							"notes": "Current RAK3401 + RAK13302 openHop Modem firmware from the upstream firmware repository main branch.",
+							"files": [
+								{
+									"type": "flash",
+									"name": "rak3401/firmware.zip",
+									"title": "rak3401/firmware.zip"
+								}
+							]
+						}
+					}
+				}
+			],
+			"image": "/img/rak_13302.svg"
+		},
+		{
+			"maker": "rak",
+			"class": "openhop",
 			"name": "RAK4631 USB",
 			"icon": "/img/rak_4631.svg",
 			"type": "nrf52",

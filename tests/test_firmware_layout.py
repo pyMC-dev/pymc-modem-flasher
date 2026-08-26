@@ -142,6 +142,30 @@ class FirmwareLayoutTest(unittest.TestCase):
             ],
         )
 
+    def test_rak3401_modem_uses_v120_and_later_nrf52_dfu_packages(self):
+        rak3401 = next(
+            device
+            for device in self.config["device"]
+            if device["name"] == "RAK3401 + RAK13302"
+        )
+
+        self.assertEqual(rak3401["maker"], "rak")
+        self.assertEqual(rak3401["type"], "nrf52")
+        self.assertEqual(rak3401["image"], "/img/rak_13302.svg")
+        self.assertTrue((REPO_ROOT / "img" / "rak_13302.svg").is_file())
+        self.assertNotIn("expandReleases", rak3401["firmware"][0])
+        self.assertEqual(rak3401["firmware"][0]["minimumRelease"], "v1.2.0")
+        self.assertEqual(
+            self.firmware_files_for_device("RAK3401 + RAK13302"),
+            [
+                {
+                    "type": "flash",
+                    "name": "rak3401/firmware.zip",
+                    "title": "rak3401/firmware.zip",
+                }
+            ],
+        )
+
     def test_rak4631_usb_modem_uses_v110_and_later_nrf52_dfu_packages(self):
         rak_usb = next(
             device
